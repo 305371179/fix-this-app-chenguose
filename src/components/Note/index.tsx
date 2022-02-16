@@ -50,10 +50,7 @@ const Note: FC = (): ReactElement => {
     const deleteNote = useCallback((id: number) => {
         dispatch(deleteNoteAction(id))
     }, [])
-    /*
-    * NoteItem点击后会调用该函数，更新state的activeIndex值，
-    * activeIndex的值为noteList的下标或者-1，列表项的选中和Preview组件显示的内容都与此有关
-    * */
+
     const setActiveIndex = useCallback((index: number) => {
         dispatch(setActiveIndexAction(index))
     }, [])
